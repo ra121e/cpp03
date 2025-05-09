@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:05:42 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/09 09:32:56 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/09 10:32:44 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class ClapTrap
 {
 public:
-	ClapTrap(std::string &name);
+	ClapTrap(const std::string &name);
 	ClapTrap(const ClapTrap &a);
 	ClapTrap	&operator=(const ClapTrap &other);
 	~ClapTrap();
