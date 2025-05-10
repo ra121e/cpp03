@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:05:42 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/09 10:32:44 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/10 19:54:16 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,11 @@ public:
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 
+	void	displayParam();
+
 private:
-	std::string		_name;
-	unsigned int	_hitPoints;
-	unsigned int	_energyPoints;
-	unsigned int	_attackDamage;
+	std::string	_name;
+	int			_hitPoints;
+	int			_energyPoints;
+	int			_attackDamage;
 };

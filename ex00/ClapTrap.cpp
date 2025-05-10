@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:12:51 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/09 11:18:34 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/10 20:04:26 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,12 +49,12 @@ void	ClapTrap::attack(const std::string &target)
 {
 	if (this->_hitPoints <= 0)
 	{
-		std::cout << "Clap Trap " << this->_name << " has no enough Hit pointhas no enough Hit point." << std::endl;
+		std::cout << "Clap Trap " << this->_name << " is dead." << std::endl;
 		return ;
 	}
 	if (this->_energyPoints <= 0)
 	{
-		std::cout << "Clap Trap " << this->_name << " has no enough Energy pointhas no enough Hit point." << std::endl;
+		std::cout << "Clap Trap " << this->_name << " can not attack (no enegry point)." << std::endl;
 		return ;
 	}
 	std::cout << "Clap Trap " << this->_name << " attacks " << target << ", causeing " << this->_attackDamage << " points of damage!" << std::endl;
@@ -64,13 +64,47 @@ void	ClapTrap::attack(const std::string &target)
 
 void	ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "Clap Trap " << this->_name << " loses " << amount << " points of damage!" << std::endl;
+	if (this->_hitPoints <= 0)
+	{
+		std::cout << "Clap Trap " << this->_name << " has not gotten damage (dead)." << std::endl;
+		return ;
+	}
+	if (static_cast<unsigned int>(this->_hitPoints) <= amount)
+	{
+		this->_hitPoints = 0;
+	}
+	else
+	{
+		this->_hitPoints = this->_hitPoints - static_cast<int>(amount);
+	}
+	std::cout << "Clap Trap " << this->_name << " got " << amount << " points of damage!" << std::endl;
 
 }
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
+	if (this->_hitPoints <= 0)
+	{
+		std::cout << "Clap Trap " << this->_name << " can not be repaired (dead)." << std::endl;
+		return ;
+	}
+	if (this->_energyPoints <= 0)
+	{
+		std::cout << "Clap Trap " << this->_name << " can not be repaired (no energy point)." << std::endl;
+		return ;
+	}
 	std::cout << "Clap Trap " << this->_name << " is repaired and regains " << amount << " hit points." << std::endl;
 	std::cout << "Clap Trap " << this->_name << " consumes " << "1" << " energy point." << std::endl;
+	this->_hitPoints += static_cast<int>(amount);
 	this->_energyPoints--;
+}
+
+void	ClapTrap::displayParam(void)
+{
+	std::cout << "==================================" << std::endl;
+	std::cout << _name << " :" << std::endl;
+	std::cout << "HP: " << _hitPoints << std::endl;
+	std::cout << "EP: " << _energyPoints << std::endl;
+	std::cout << "AD: " << _attackDamage << std::endl;
+	std::cout << "==================================" << std::endl;
 }
