@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:12:51 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 19:33:13 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/11 20:10:24 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &other)
 	if (this != &other)
 	{
 		this->_name = other._name;
-		this->_hitPoints = 10;
-		this->_energyPoints = 10;
-		this->_attackDamage = 0;
+		this->_hitPoints = other._hitPoints;
+		this->_energyPoints = other._energyPoints;
+		this->_attackDamage = other._attackDamage;
 	}
 	return (*this);
 }
