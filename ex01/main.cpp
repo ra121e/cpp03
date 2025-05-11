@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 12:11:54 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 18:55:30 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/11 19:19:19 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 
 	//hey stop!!
 	std::cout << "\n--- continue attack untill EP 0 ---" << std::endl;
-	for (int i = 0; i < 8; ++i)
+	for (int i = 0; i < 10; ++i)
 	{
 		clap.attack("Ming");
 	}
@@ -74,7 +74,7 @@ int	main(void)
 
 	//attack attack attack attack....
 	std::cout << "\n--- Draining ScavTrap Energy ---" << std::endl;
-	for (int i = 0; i < 49; ++i)
+	for (int i = 0; i < 51; ++i)
 	{
 		scav.attack("Alvin");
 	}
