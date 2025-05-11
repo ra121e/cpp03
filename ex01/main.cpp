@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 12:11:54 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 19:19:19 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/11 19:40:43 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,11 @@ int	main(void)
 	scav.beRepaired(15);
 	scav.displayParam();
 
-	// ScavTrap独自の特殊能力テスト
-//	scav.guardGate();
+	//ScavTrap own function
+	scav.guardGate();
 
 	//attack attack attack attack....
-	std::cout << "\n--- Draining ScavTrap Energy ---" << std::endl;
+	std::cout << "\n--- iterate attack untill ScavTrap Energy ---" << std::endl;
 	for (int i = 0; i < 51; ++i)
 	{
 		scav.attack("Alvin");
