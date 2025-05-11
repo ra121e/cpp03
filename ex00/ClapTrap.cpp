@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:12:51 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 19:02:37 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/11 19:07:12 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ ClapTrap::ClapTrap(const std::string &name) :
 
 ClapTrap::ClapTrap(const ClapTrap &a)
 {
-	std::cout << "ClapTrap " _name << " copy constructor called" << std::endl;
+	std::cout << "ClapTrap " << _name << " copy constructor called" << std::endl;
 	*this = a;
 }
 
 ClapTrap	&ClapTrap::operator=(const ClapTrap &other)
 {
-	std::cout << "ClapTrap " << _name " copy asignment operator called" << std::endl;
+	std::cout << "ClapTrap " << _name << " copy asignment operator called" << std::endl;
 	if (this != &other)
 	{
 		this->_name = other._name;
