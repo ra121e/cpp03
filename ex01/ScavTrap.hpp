@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 14:09:59 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/10 12:12:46 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/11 18:29:01 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ public:
 	ScavTrap	&operator=(const ScavTrap &other);
 	~ScavTrap();
 
-	void	attack(const std::string target);
-	void	guardGate();
+	void	attack(const std::string &target);
+//	void	guardGate();
 
 private:
 };
