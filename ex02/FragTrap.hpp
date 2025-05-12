@@ -6,10 +6,11 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 19:44:24 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 20:43:07 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/12 16:01:55 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include "ClapTrap.hpp"
 
 class FragTrap :
