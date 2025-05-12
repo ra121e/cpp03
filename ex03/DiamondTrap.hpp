@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 00:43:38 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/12 15:10:46 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/12 23:27:00 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ public:
 	DiamondTrap	&operator=(const DiamondTrap &other);
 	~DiamondTrap();
 
+	void	whoAmI();
 private:
 	std::string	_name;
 };

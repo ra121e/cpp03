@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 08:37:33 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/12 22:15:29 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/12 23:29:41 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,10 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 DiamondTrap::~DiamondTrap()
 {
 	std::cout << "DiamondTrap " << _name << " destructor called" << std::endl;
+}
+
+void	DiamondTrap::whoAmI()
+{
+	std::cout << "DiamondTrap " << _name << " has its own name as " << _name << std::endl;
+	std::cout << "DiamondTrap " << _name << " has its ClapTrap name as " << ClapTrap::_name << std::endl;
 }
