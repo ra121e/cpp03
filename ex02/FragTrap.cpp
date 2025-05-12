@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 19:54:29 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 20:51:35 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/12 23:25:16 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,10 @@ FragTrap	&FragTrap::operator=(const FragTrap &other)
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap " << _name << " destructor called" << std::endl;
+}
+
+
+void	FragTrap::highFivesGuys(void)
+{
+	std::cout << "FragTrap " << _name << " highFiveGuys called" << std::endl;
 }
