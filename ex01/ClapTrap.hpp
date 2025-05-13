@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 16:14:40 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 16:23:45 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/13 21:02:28 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,6 @@ protected:
 	int			_hitPoints;
 	int			_energyPoints;
 	int			_attackDamage;
+
+	ClapTrap();
 };

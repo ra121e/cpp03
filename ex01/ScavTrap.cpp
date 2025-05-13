@@ -6,11 +6,14 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:57:33 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 20:25:22 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/13 21:04:24 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap()
+{}
 
 ScavTrap::ScavTrap(const std::string &name) :
 	ClapTrap(name)
