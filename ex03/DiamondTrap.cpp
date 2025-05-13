@@ -6,11 +6,14 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/12 08:37:33 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/12 23:29:41 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/13 21:16:42 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
+
+DiamondTrap::DiamondTrap()
+{}
 
 DiamondTrap::DiamondTrap(const std::string &name) :
 	ClapTrap(name + "_clap_name"),
@@ -27,7 +30,8 @@ DiamondTrap::DiamondTrap(const std::string &name) :
 DiamondTrap::DiamondTrap(const DiamondTrap &other) :
 	ClapTrap(other),
 	ScavTrap(other),
-	FragTrap(other)
+	FragTrap(other),
+	_name(other._name)
 {
 	std::cout << "DiamondTrap " << _name << " copy constructor called" << std::endl;
 }
@@ -38,6 +42,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &other)
 	if (this != &other)
 	{
 		ClapTrap::operator=(other);
+		_name = other._name;
 	}
 	return (*this);
 }

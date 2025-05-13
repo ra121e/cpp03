@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 19:44:24 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/12 23:25:29 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/13 21:22:28 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ public:
 	FragTrap	&operator=(const FragTrap &other);
 	~FragTrap();
 
-	void	highFivesGuys(void);
+	void	highFivesGuys(void) const;
 
-private:
+protected:
+	FragTrap();
 };
