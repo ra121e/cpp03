@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 20:36:44 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 20:44:04 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/13 12:45:08 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,11 @@ int	main(void)
 	frag.displayParam();
 
 	//FragTrap own function
-//	frag.guardGate();
+	frag.highFivesGuys();
 
 	//attack attack attack attack....
 	std::cout << "\n--- iterate attack untill FragTrap Energy ---" << std::endl;
-	for (int i = 0; i < 51; ++i)
+	for (int i = 0; i < 101; ++i)
 	{
 		frag.attack("Alvin");
 	}
@@ -92,9 +92,6 @@ int	main(void)
 	frag.attack("Ming Jun");
 	frag.beRepaired(10);
 
-	// コンストラクタ・デストラクタのチェーンテストを呼び出す
-//	test_chaining();
-	// main関数終了時、clap, fragインスタンスのデストラクタが呼び出される
 	std::cout << "\n--- End of Main ---" << std::endl;
 
 	return (0);
