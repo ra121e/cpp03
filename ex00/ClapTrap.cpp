@@ -6,11 +6,12 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:12:51 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/11 20:10:24 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/13 09:28:37 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include <climits>
 
 ClapTrap::ClapTrap(const std::string &name) :
 	_name(name),
@@ -18,7 +19,7 @@ ClapTrap::ClapTrap(const std::string &name) :
 	_energyPoints(10),
 	_attackDamage(0)
 {
-	std::cout << "ClapTrap " << _name << " Default constructor called" << std::endl;
+	std::cout << "ClapTrap " << _name << " default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &a)
@@ -57,9 +58,9 @@ void	ClapTrap::attack(const std::string &target)
 		std::cout << "ClapTrap " << this->_name << " can not attack (no enegry point)." << std::endl;
 		return ;
 	}
+	this->_energyPoints--;
 	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causeing " << this->_attackDamage << " points of damage!" << std::endl;
 	std::cout << "ClapTrap " << this->_name << " consumes " << "1" << " energy point." << std::endl;
-	this->_energyPoints--;
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)
@@ -68,6 +69,11 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	{
 		std::cout << "ClapTrap " << this->_name << " has not gotten damage (dead)." << std::endl;
 		return ;
+	}
+	if (amount > INT_MAX)
+	{
+		amount = 0;
+		std::cout << "Damage amount should be 0~2147483647. otherwise 0." << std::endl;
 	}
 	if (static_cast<unsigned int>(this->_hitPoints) <= amount)
 	{
@@ -93,10 +99,23 @@ void	ClapTrap::beRepaired(unsigned int amount)
 		std::cout << "ClapTrap " << this->_name << " can not be repaired (no energy point)." << std::endl;
 		return ;
 	}
-	std::cout << "ClapTrap " << this->_name << " is repaired and regains " << amount << " hit points." << std::endl;
-	std::cout << "ClapTrap " << this->_name << " consumes " << "1" << " energy point." << std::endl;
-	this->_hitPoints += static_cast<int>(amount);
+	if (amount > INT_MAX)
+	{
+		amount = 0;
+		std::cout << "Repair amount should be 0~2147483647. otherwise 0." << std::endl;
+	}
+	if (static_cast<unsigned int>(this->_hitPoints) + amount > INT_MAX)
+	{
+		this->_hitPoints = INT_MAX;
+		std::cout << "ClapTrap " << this->_name << " is repaired and regains to MAX hit points." << std::endl;
+	}
+	else
+	{
+		this->_hitPoints += static_cast<int>(amount);
+		std::cout << "ClapTrap " << this->_name << " is repaired and regains " << amount << " hit points." << std::endl;
+	}
 	this->_energyPoints--;
+	std::cout << "ClapTrap " << this->_name << " consumes " << "1" << " energy point." << std::endl;
 }
 
 void	ClapTrap::displayParam(void)
@@ -106,5 +125,5 @@ void	ClapTrap::displayParam(void)
 	std::cout << "HP: " << _hitPoints << std::endl;
 	std::cout << "EP: " << _energyPoints << std::endl;
 	std::cout << "AD: " << _attackDamage << std::endl;
-	std::cout << "==================================" << std::endl;
+	std::cout << "==================================" << std::endl << std::endl;
 }
