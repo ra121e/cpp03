@@ -6,12 +6,15 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:12:51 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/13 09:28:37 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/13 20:58:19 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <climits>
+
+ClapTrap::ClapTrap()
+{}
 
 ClapTrap::ClapTrap(const std::string &name) :
 	_name(name),
