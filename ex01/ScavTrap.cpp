@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:57:33 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/13 21:04:24 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/13 21:07:45 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ScavTrap::attack(const std::string &target)
 	this->_energyPoints--;
 }
 
-void	ScavTrap::guardGate(void)
+void	ScavTrap::guardGate(void) const
 {
 	std::cout << "ScavTrap " << _name << " is now in Gate keeper mode." << std::endl;
 }
