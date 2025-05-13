@@ -6,11 +6,14 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 19:54:29 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/12 23:25:16 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/13 21:11:03 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap()
+{}
 
 FragTrap::FragTrap(const std::string &name) :
 	ClapTrap(name)
@@ -43,7 +46,7 @@ FragTrap::~FragTrap()
 }
 
 
-void	FragTrap::highFivesGuys(void)
+void	FragTrap::highFivesGuys(void) const
 {
 	std::cout << "FragTrap " << _name << " highFiveGuys called" << std::endl;
 }
