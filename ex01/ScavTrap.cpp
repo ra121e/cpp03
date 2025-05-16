@@ -6,19 +6,21 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/09 19:57:33 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/13 21:07:45 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/16 07:58:59 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap()
-{}
+{
+	std::cout << "ScavTrap " << _name << " Default constructor called" << std::endl;
+}
 
 ScavTrap::ScavTrap(const std::string &name) :
 	ClapTrap(name)
 {
-	std::cout << "ScavTrap " << _name << " Default constructor called" << std::endl;
+	std::cout << "ScavTrap " << _name << " parameterized constructor called" << std::endl;
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;

@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/08 19:12:51 by athonda           #+#    #+#             */
-/*   Updated: 2025/05/13 20:58:19 by athonda          ###   ########.fr       */
+/*   Updated: 2025/05/16 07:58:23 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 #include <climits>
 
 ClapTrap::ClapTrap()
-{}
+{
+	std::cout << "ClapTrap " << _name << " default constructor called" << std::endl;
+}
 
 ClapTrap::ClapTrap(const std::string &name) :
 	_name(name),
@@ -22,7 +24,7 @@ ClapTrap::ClapTrap(const std::string &name) :
 	_energyPoints(10),
 	_attackDamage(0)
 {
-	std::cout << "ClapTrap " << _name << " default constructor called" << std::endl;
+	std::cout << "ClapTrap " << _name << " parameterized constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &a)
